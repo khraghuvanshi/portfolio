@@ -1,0 +1,202 @@
+#title {
+    background-color: #3ba3e9;
+}
+
+.align{
+        margin: auto;
+        width: 70%;
+        border: 3px solid black;
+        padding: 10px;
+}
+.container-fluid{
+    padding: 5% 10%;
+}
+
+h1{
+    font-family: "Roboto Mono";
+    font-size: 3rem;
+    line-height: 1.5;
+    color: floralwhite;
+}
+
+h2{
+   font-family: "Roboto Mono", sans-serif; 
+   padding-bottom: 5%;
+   font-size: 2.5rem;
+   color: dimgrey;
+}
+
+h3{
+    font-family: "Roboto Mono";
+}
+
+h4{
+    font-weight: "Roboto Mono";
+    font-family: "Roboto Mono";
+}
+
+h5{
+    font-weight: "Roboto Mono";
+    font-family: "Roboto Mono";
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+}
+
+h6{
+    font-weight: "Roboto Mono";
+    font-family: "Roboto Mono";
+}
+
+p{
+    color:#8f8f8f;
+}
+
+.navbar{
+    padding: 0 0 4.5rem;
+}
+
+.navbar-brand{
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: black;
+}
+
+.navbar-item{
+    padding: 0 18px;
+}
+
+.nav-link{
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.download-button{
+    margin: 5% 3% 5% 0%;
+}
+
+.title-image{
+    width: 60%;
+    transform: rotate(20deg);
+    position: absolute;
+}
+
+a:link {
+    color: cornsilk;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+a:visited {
+    color: cornsilk;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+a:hover {
+    color: chartreuse;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+#aboutme{
+    background-color: #fafafa;
+    text-align: center;
+  }
+
+.textalign {
+    text-align: center;
+}
+
+.padding{
+    padding: 5% 7%;
+}
+
+#languages{
+    background-color: #3ba3e9;
+}
+
+.feature-box{
+    text-align: center;
+    padding: 5%;
+}
+
+.icon{
+    color:#A3E93B;
+    margin-bottom: 1rem;
+}
+.icon:hover{
+    color: #86C6F1;
+}
+
+#projectimg{
+    background-color: #fafafa;
+    text-align: center;
+}
+
+
+.carousel-item{
+    padding: 7% 15%;
+}
+
+.project-image{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon2{
+    color: #3ba3e9;
+    margin-bottom: 1rem;
+}
+
+
+#projects{
+    background-color: #3ba3e9;
+    text-align: center;
+}
+
+.project-column{
+    padding: 3% 2%;
+
+}
+
+.projectname-bg{
+    background-color: #b7d7ed;
+}
+
+.projectdes-bg{
+    background-color:  #fafafa;
+}
+
+.white{
+    color: white;
+}
+
+.pricing-pfont{
+    font-size: large;
+}
+
+.ul{
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+#contact{
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.iconpadding{
+    padding: 2% 2%;
+}
+
