@@ -118,6 +118,9 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     const image = project.image ? `<img src="${project.image}" alt="${title}">` : '';
     const description = project.description || 'No description available.';
     const year = project.year ? `<span class="project-year">${project.year}</span>` : '';
+    const link = project.link 
+      ? `<a href="${project.link}" class="view-button" target="_blank" rel="noopener noreferrer">View Project</a>` 
+      : '';
 
     article.innerHTML = `
       <${headingLevel}>${title}</${headingLevel}>
@@ -125,6 +128,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
       <div class = "project-info">
         ${year}
         <p>${description}</p>
+        ${link}
       </div>
     `;
 
