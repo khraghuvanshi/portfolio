@@ -29,7 +29,7 @@
         "title": "Power Outages",
         "year": "2024",
         "image": "https://opengraph.githubassets.com/1/khraghuvanshi/power_outages",
-        "description": "The project analyses the data of major power outages in the US from January 2000 to July 2006."
+        "description": "The project analyses the data of major power outages in the US from January 2000 to July 2006. Designed and developed a data storytelling website that explores patterns in U.S. power outages and predicts outage durations using machine learning. Combined interactive visualizations with narrative insights to highlight key findings and model performance."
     },
     {
         "title": "Ship Survival: Titanic, Lusitania, and Estonia",
