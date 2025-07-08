@@ -1,5 +1,19 @@
 [
     {
+        "title": "Love Island USA Season 7 Visualization",
+        "year": "2025",
+        "image": "https://opengraph.githubassets.com/1/khraghuvanshi/love-island-visualization",
+        "description": "An interactive, web-based data visualization project exploring relationship dynamics and contestant timelines from Season 7 of Love Island USA. Built with Next.js, D3.js, and TypeScript, the site visualizes contestant entries and couple formations over time using a force-directed graph."   
+    },
+
+    {
+        "title": "Movie Recommendation System",
+        "year": "2025",
+        "image": "https://opengraph.githubassets.com/1/khraghuvanshi/movie_recommendations",
+        "description": "Developed an interactive movie recommendation web app using Streamlit that suggests similar movies based on a selected title. Leveraged a content-based filtering approach using cosine similarity on movie metadata. The system is intuitive and fast, allowing users to explore recommendations along with poster previews for each suggestion."   
+    },
+    
+    {
         "title": "PCA Spotify Music Recommendation",
         "year": "2025",
         "image": "https://opengraph.githubassets.com/1/ebeltyukova/PCA_for_Spotify_Recs",
@@ -52,23 +66,5 @@
         "year": "2021",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Esse exercitationem repellat consequuntur hic, aut voluptatum? Nemo laborum adipisci voluptas, eligendi iste dolor iure! Quae officia perspiciatis, cupiditate, accusantium cumque inventore sapiente maiores, ad sit doloremque sunt facilis quibusdam?"
-    },
-    {
-        "title": "Dolorum cum architecto autem!",
-        "year": "2021",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Nulla cupiditate mollitia atque corporis eveniet tempora ipsam, reprehenderit nisi earum libero quod molestias corrupti incidunt numquam animi nesciunt maxime veniam rerum! Labore ducimus in suscipit veniam, ullam nisi dolorem!"
-    },
-    {
-        "title": "Officiis libero quos voluptatibus?",
-        "year": "2021",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Optio ab deserunt tempore esse quo sequi similique veniam nemo obcaecati laborum, minima asperiores porro reiciendis autem nostrum eligendi, ex ratione perferendis eaque omnis non assumenda totam. Similique, rerum vitae."
-    },
-    {
-        "title": "Tenetur fugit eum repellat.",
-        "year": "2021",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Voluptatum ad sint libero voluptatibus provident blanditiis similique nobis molestias, nisi atque unde, repellat ratione quae alias fuga, minima voluptatem aliquam maiores quos. Totam quasi adipisci ab numquam? Quia, ea."
     }
 ]
