@@ -1,0 +1,88 @@
+[
+    {
+        "title": "Love Island USA Season 7 Visualization",
+        "year": "2025",
+        "image": "https://opengraph.githubassets.com/1/khraghuvanshi/love-island-visualization",
+        "description": "An interactive, web-based data visualization project exploring relationship dynamics and contestant timelines from Season 7 of Love Island USA. Built with Next.js, D3.js, and TypeScript, the site visualizes contestant entries and couple formations over time using a force-directed graph.",
+        "link": "https://love-island-visualization-git-main-khraghuvanshis-projects.vercel.app" 
+    },
+
+    {
+        "title": "Movie Recommendation System",
+        "year": "2025",
+        "image": "https://opengraph.githubassets.com/1/khraghuvanshi/movie_recommendations",
+        "description": "Developed an interactive movie recommendation web app using Streamlit that suggests similar movies based on a selected title. Leveraged a content-based filtering approach using cosine similarity on movie metadata. The system is intuitive and fast, allowing users to explore recommendations along with poster previews for each suggestion.", 
+        "link": "https://movierecommendations-khushi-raghuvanshi-old.streamlit.app/"  
+    },
+
+    {
+        "title": "Metabolic Mystery: Interactive Exploration",
+        "year": "2025",
+        "image": "https://opengraph.githubassets.com/1/khraghuvanshi/metabolic_mystery",
+        "description": "Created an interactive storytelling website that visualizes how macronutrients affect insulin response and diabetes risk. Built with D3.js, the site allows users to input nutritional values (carbs, fat, protein, fiber) and see real-time predictions of their metabolic health category. Animated cluster plots and educational content walk users through the relationship between diet and glucose metabolism",
+        "link": "https://khraghuvanshi.github.io/metabolic_mystery/"  
+    },
+    {
+        "title": "Comparative Analysis of CNN Architectures for Image Classification",
+        "year": "2025",
+        "image": "https://opengraph.githubassets.com/1/ebeltyukova/Neural-Network-",
+        "description": "Conducted a comprehensive comparison between AlexNet and GoogleNet architectures on the CIFAR-10 dataset to identify the most effective CNN design for multi-class image classification. This project involved replicating and modifying both architectures, performing extensive hyperparameter tuning using Optuna, and analyzing the effects of activation functions, dropout rates, pooling methods, and learning rates on model performance.",
+        "link": "https://github.com/ebeltyukova/Neural-Network-.git"
+    },
+    {
+        "title": "PCA Spotify Music Recommendation",
+        "year": "2025",
+        "image": "https://opengraph.githubassets.com/1/ebeltyukova/PCA_for_Spotify_Recs",
+        "description": "This project is a Music Recommendation System designed to provide personalized song recommendations based on input criteria. Users can specify the name of a song, the artist, and their preferences for features such as danceability, loudness, and instrumentalness.",
+        "link": "https://github.com/ebeltyukova/PCA_for_Spotify_Recs.git"
+    },
+    {
+        "title": "Classifier Evaluations",
+        "year": "2024",
+        "image": "https://opengraph.githubassets.com/1/khraghuvanshi/classifier_evaluations",
+        "description": "This project compares the performance of six supervised learning classifiers—Random Forest, Decision Tree, K-Nearest Neighbors (KNN), Naive Bayes, Support Vector Machine (SVM), and Logistic Regression—on binary classification tasks using three datasets from the UCI Machine Learning Repository.",
+        "link": "https://github.com/khraghuvanshi/classifier_evaluations.git"
+    },
+    {
+        "title": "Power Outages",
+        "year": "2024",
+        "image": "https://opengraph.githubassets.com/1/khraghuvanshi/power_outages",
+        "description": "The project analyses the data of major power outages in the US from January 2000 to July 2006. Designed and developed a data storytelling website that explores patterns in U.S. power outages and predicts outage durations using machine learning. Combined interactive visualizations with narrative insights to highlight key findings and model performance.",
+        "link": "https://khraghuvanshi.github.io/power_outages/"
+    },
+    {
+        "title": "Ship Survival: Titanic, Lusitania, and Estonia",
+        "year": "2023",
+        "image": "https://opengraph.githubassets.com/1/COGS108/Group51_SP24",
+        "description": "This project focuses on understanding the differences between the demographics of the individuals who survived or failed to survive the sinking of 3 passenger ships; the Titanic, the RMS Lusitania, and the MS Estonia; and how they differed between the different ships.",
+        "link": "https://github.com/COGS108/Group51_SP24.git"
+    },
+    {
+        "title": "KNN Classifier",
+        "year": "2023",
+        "image": "https://opengraph.githubassets.com/1/khraghuvanshi/KNN-classifier",
+        "description": "The Classifier determines if the picture given is a Daytime picture or a Nighttime picture based on the data fed to it.",
+        "link": "https://github.com/khraghuvanshi/KNN-Classifier.git"
+    },
+    {
+        "title": "British Bakeoff Analysis",
+        "year": "2022",
+        "image": "https://opengraph.githubassets.com/1/khraghuvanshi/british-bakeoff-analysis",
+        "description": "Carried out data analysis on Data Frames about the show British Bakeoff. Established relationships between variables using permutation testing, regression, hypothesis testing, bootstrapping, and data visualization",
+        "link": "https://github.com/khraghuvanshi/british-bakeoff-analysis.git"
+    },
+    {
+        "title": "Dicegame",
+        "year": "2022",
+        "image": "https://opengraph.githubassets.com/1/khraghuvanshi/dicegame",
+        "description": "It's a computer/ webpage game where the user specifies the number of times they want to play as input and it gives the money they win or lose as output.",
+        "link": "https://khraghuvanshi.github.io/dicegame/"
+    },
+    {
+        "title": "Wedding Planner",
+        "year": "2022",
+        "image": "https://opengraph.githubassets.com/1/khraghuvanshi/weddingplanner",
+        "description": "The program takes user's input on the number of guests and number of table they want at their wedding and give an evenly distributed seating arrangement.",
+        "link": "https://khraghuvanshi.github.io/weddingplanner/"
+    }
+]

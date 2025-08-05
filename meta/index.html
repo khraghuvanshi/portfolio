@@ -1,0 +1,51 @@
+<!-- <!DOCTYPE html>
+<html lang="en" class="home">
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <script type="module" src="../global.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Analysis </title>
+</head>
+<body>
+    <h1> Meta Analysis </h1>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <script type="module" src="../global.js"></script>
+    <script type="module" src="main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h1>Meta Analysis</h1>
+    <div id="stats"></div>
+
+    <h2>Commits by time of day</h2>
+
+    <div id="chart"></div>
+
+    <dl id="commit-tooltip" class="info tooltip">
+        <dt>Commit</dt>
+        <dd>
+          <a href="" id="commit-link" target="_blank"></a>
+        </dd>
+      
+        <dt>Date</dt>
+        <dd id="commit-date"></dd>
+      
+        <!-- Add: Time, author, lines edited -->
+    </dl>
+
+    <dl id="language-breakdown" class="stats"></dl>
+
+    <script src="../global.js" type="module"></script>
+</body>
+</html>
