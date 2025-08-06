@@ -1,430 +1,66 @@
-html {
-   /* color-scheme: dark; */
-  --color-accent: rgb(78, 192, 241); /* Define the accent color */
-  accent-color: var(--color-accent); /* Apply it as the default accent color */
+/* Reset & fonts */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+body { color: #000; }
+
+/* Variables */
+:root {
+  --blue: #4a79a1;
+  --yellow: #FFD23F;
+  --dark: #111;
 }
 
-@media (prefers-color-scheme: dark) {
+/* Header */
+header { background: var(--blue); }
+nav { display: flex; justify-content: space-between; padding: 1rem 2rem; }
+nav ul { list-style: none; display: flex; gap: 1.5rem; }
+nav a { color: #fff; text-decoration: none; font-weight: 500; }
+.btn { background: var(--yellow); padding: 0.8rem 1.2rem; text-decoration: none; color: var(--dark); font-weight: 500; box-shadow: 4px 4px var(--dark); }
 
-  :root {
-    --text-primary: #ffffff; /* White text */
-    --text-secondary: #b0b3b8; /* Lighter gray for labels */
-    --bg-primary: #181818; /* Dark background */
-  }
+/* Hero */
+.hero { background: var(--blue); color: #fff; text-align: left; padding: 4rem 2rem; }
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+.hero-buttons { display: flex; gap: 1rem; }
 
-  #profile-stats {
-    background: var(--bg-primary); /* Ensure the section changes color */
-  }
+/* Sections */
+section { padding: 3rem 2rem; }
+section:nth-of-type(even) { background: #fff; }
 
-  nav {
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: oklch(skyblue/ 40);
-    }
+/* Me Entries */
+.me h2 { text-align: center; margin-bottom: 2rem; font-size: 2.5rem; }
+.entry { display: flex; align-items: center; border-top: 1px solid #000; padding: 1.5rem 0; }
+.entry img { width: 80px; height: 80px; object-fit: cover; margin-right: 1rem; }
+.entry-content { flex: 1; }
+.entry-content h3 { font-size: 1.5rem; }
+.entry-content .date { color: #467069; }
+.arrow { font-size: 2rem; color: #467069; }
 
-  nav a {
-    color: white; /* Links in white */
-  }
+/* Projects */
+.projects-content { display: flex; align-items: center; gap: 2rem; }
+.projects-content img { width: 50%; }
+.projects-content div { flex: 1; }
+.projects-content h2 { font-size: 2.5rem; margin: 0.5rem 0; }
 
-  nav a.current{
-    border-bottom: 0.4em solid rgb(182, 231, 251);
-    padding-bottom: 0.4em
-  }
+/* Top Picks */
+.top-picks h2 { text-align: center; font-size: 2.5rem; margin-bottom: 2rem; }
+.cards { display: flex; gap: 2rem; justify-content: center; }
+.card { border: 1px solid #000; padding: 1.5rem; box-shadow: 4px 4px var(--dark); width: 250px; position: relative; }
+.check { font-size: 3rem; color: #467069; }
+.card h3 { margin: 0.5rem 0; }
+.details { margin-top: 1rem; display: inline-block; }
 
-  nav a:hover {
-    background-color: #376ccf; /* Dark hover background */
-  }
-}
+/* FAQ */
+.faq h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+.ask { margin-bottom: 1rem; display: inline-block; background: #065a8e; color: #fff; }
+.faq-list .faq-item { border-top: 1px solid #000; padding: 1rem 0; }
+.question { display: flex; justify-content: space-between; cursor: pointer; }
+.answer { display: none; padding-top: 0.5rem; }
 
-body {
-    /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
-    font: 100%/1.5 system-ui;
-    max-width: 100%;
-    margin-inline: auto;
-    padding: 25px 50px;
-  }
+/* Contact */
+.contact-content { display: flex; gap: 2rem; }
+iframe { width: 50%; height: 300px; border: none; }
+form { flex: 1; display: flex; flex-direction: column; gap: 1rem; }
+.field label { font-weight: 500; }
+.field input, .field textarea { border: none; border-bottom: 1px solid #000; padding: 0.5rem; }
+.send { align-self: flex-start; background: #065a8e; color: #fff; }
 
-nav{
-  display: flex;
-  margin-bottom: 25px;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: skyblue;
-}
-
-nav a{
-  flex: 1;
-  text-decoration: none;
-  color: inherit;
-  text-align: center;
-  padding: 0.5em
-}
-
-nav a.current{
-  border-bottom: 0.4em solid rgb(40, 115, 145);
-  padding-bottom: 0.4em
-}
-
-nav a:hover {
-  border-bottom: 0.4em solid var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);
-}
-
-form {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5em;
-}
-
-label {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  font-size: 1em;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 60px;
-}
-
-button {
-  grid-column: span 2; 
-  padding: 10px;
-  font-size: 1.1em;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-}
-
-.projects{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-  gap: 1em; 
-}
-
-.projects img {
-  max-width: 100%;  /* Ensures images do not overflow their container */
-  height: auto;      /* Maintains aspect ratio */
-  object-fit: cover; /* Prevents stretching */
-  border-radius: 8px; /* Rounds image corners */
-}
-section{
-  grid-template-rows: subgrid;
-  grid-row: span 3;
-  gap: 1em;
-  max-width: 800px;
-  background: rgb(54, 76, 105);
-  padding: 30px;
-  margin: 80px auto 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-article{
-  grid-template-rows: subgrid;
-  grid-row: span 3;
-  gap: 1em;
-  max-width: 800px;
-  background: rgb(54, 76, 105);
-  padding: 30px;
-  margin: 80px auto 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-h1 {
-  font-size: 400%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.1; 
-  text-wrap: balance; 
-}
-
-h2{
-  margin: 0;
-}
-
-header h1 {
-  font-size: 2.5em;
-  color: #0077b6;
-  margin-bottom: 5px;
-  text-align: center;
-}
-
-header p {
-  text-align: center;
-  font-size: 1.1em;
-  color: #0077b6;
-}
-
-header a {
-  color: #0077b6;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-header a:hover {
-  text-decoration: underline;
-}
-
-ul {
-  margin-top: 3px;
-  padding-left: 5px;
-}
-
-ul li {
-  margin-bottom: 5px;
-}
-
-/* Time Formatting */
-time {
-  font-style: italic;
-  color: #666;
-}
-
-.color-scheme {
-  position: absolute !important;
-  top: 10px !important;
-  right: 10px !important;   
-  font-family: inherit;
-  border-radius: 5px;
-}
-
-/* Center the entire GitHub Stats section */
-#profile-stats {
-  text-align: center;
-  margin: 40px auto;
-  max-width: 800px;
-}
-
-/* Create a responsive 4-column grid */
-#profile-stats dl {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-  gap: 20px;
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-}
-
-/* Style the labels (dt) */
-#profile-stats dt {
-  grid-row: 1; /* All <dt> elements stay in row 1 */
-  font-size: 12px;
-  font-weight: bold;
-  color: #6c757d; /* Light gray color */
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Style the values (dd) */
-#profile-stats dd {
-  grid-row: 2; /* All <dd> elements stay in row 2 */
-  font-size: 24px;
-  font-weight: bold;
-  color: #5386c6; /* Black text */
-  margin: 0;
-}
-
-#projects-plot {
-  max-width: 20em;
-  margin-block: 2em;
-
-  overflow: visible;
-}
-
-.container {
-  display: flex;        
-  gap: 2em;             
-  align-items: center;  
-  flex-wrap: wrap;    
-}
-
-/* Styling the pie chart container */
-.container svg {
-  width: 200px;         
-  height: 200px;        
-}
-
-.legend {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr)); 
-  gap: 1em; 
-  flex: 1; 
-  border: 2px solid #ccc; 
-  padding: 1em; 
-  margin: 2em 0; 
-}
-
-/* Styling each legend item */
-.legend-item {
-  display: flex;
-  align-items: center; 
-  justify-content: center;
-  gap: 0.5em;
-  text-align: center;
-}
-
-/* Styling the swatch (color box) */
-.swatch {
-  display: inline-block; /* So it can have width and height */
-  width: 1em; /* Square shape */
-  height: 1em; /* Square shape */
-  background-color: var(--color); /* Use the dynamic color */
-  border-radius: 50%; /* Round corners to make it a circle */
-}
-
-/* Optional: Style the text */
-.legend-item span {
-  font-size: 1em;
-  display: inline-block; 
-   /* vertical-align: middle; */
-}
-
-/* Step 5.1: Highlight hovered wedge */
-svg:has(path:hover) path:not(:hover) {
-  opacity: 0.5;
-}
-
-/* Smooth transition for hover effect */
-path {
-  transition: 300ms;
-  cursor: pointer;
-}
-
-/* Step 5.2: Highlight selected wedge */
-.selected {
-  --color: oklch(60% 45% 0) !important;
-}
-
-/* Change fill color of selected wedge */
-.selected:is(path) {
-  fill: var(--color);
-}
-
-/* Highlight selected legend item */
-.selected:is(li) {
-  font-weight: bold;
-  color: var(--color);
-}
-
-.stats {
-  /* display: grid;
-  grid-template-columns: max-content auto;
-  gap: 0.5rem 1rem; */
-  text-align: center;
-  margin: 40px auto;
-  max-width: 800px;
-}
-
-.stats dt {
-  /* font-weight: bold; */
-  grid-row: 1; /* All <dt> elements stay in row 1 */
-  font-size: 12px;
-  font-weight: bold;
-  color: #6c757d; /* Light gray color */
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.stats dd {
-  /* margin: 0; */
-  grid-row: 2; /* All <dd> elements stay in row 2 */
-  font-size: 24px;
-  font-weight: bold;
-  color: #5386c6; /* Black text */
-  margin: 0;
-}
-
-.stats dl {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-  gap: 20px;
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-}
-
-.gridlines path {
-  stroke: none;
-}
-
-.gridlines line {
-  stroke: #ddd;
-  stroke-opacity: 0.7;
-  shape-rendering: crispEdges;
-}
-
-dl.info {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 0.5em 1em;
-  padding: 0.5em;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  backdrop-filter: blur(5px);
-  transition-duration: 500ms;
-  transition-property: opacity, visibility;
-  position: fixed;
-  top: 1em;
-  left: 1em;
-  pointer-events: none;
-}
-
-dl.info[hidden] {
-  opacity: 0;
-  visibility: hidden;
-}
-
-circle {
-  transition: 200ms;
-  transform-origin: center;
-  transform-box: fill-box;
-}
-
-circle:hover {
-  transform: scale(1.5);
-}
-
-@keyframes marching-ants {
-  to {
-    stroke-dashoffset: -8; /* 5 + 3 */
-  }
-}
-
-.selection {
-  fill-opacity: 0.1;
-  stroke: black;
-  stroke-opacity: 0.7;
-  stroke-dasharray: 5 3;
-  animation: marching-ants 2s linear infinite;
-}
-
-.view-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 14px;
-  background-color: #007acc;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: background-color 0.2s ease;
-}
-
-.view-button:hover {
-  background-color: #005fa3;
-}
-.view-button:active {
-  background-color: #004d8c;
-}
