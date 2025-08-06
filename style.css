@@ -44,7 +44,10 @@ body {
     max-width: 100%;
     margin-inline: auto;
     padding: 25px 50px;
-  }
+    background: #0a174e; /* dark blue */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
 nav{
   display: flex;
@@ -247,6 +250,9 @@ time {
   gap: 2em;             
   align-items: center;  
   flex-wrap: wrap;    
+  background: #0a174e; /* dark blue */
+  padding: 40px 0;
+  justify-content: center;
 }
 
 /* Styling the pie chart container */
@@ -427,4 +433,21 @@ circle:hover {
 }
 .view-button:active {
   background-color: #004d8c;
+}
+
+.inner {
+    background: #fff; /* white */
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    max-width: 700px;
+    width: 90%;
+}
+
+h1, h2 {
+    color: #0a174e;
+}
+
+p {
+    color: #222;
 }
