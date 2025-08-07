@@ -1,18 +1,39 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Projects</title>
-<link rel="stylesheet" href="style.css"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></head><body>
-<header data-aos="fade-down"><nav><ul>
-<li><a href="index.html">Home</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">GitHub</a></li>
-<li><a href="#">Tableau</a></li></ul><a class="btn" href="#list">Contact Me</a></nav></header>
-<section class="projects-list" id="list" data-aos="fade-up"><div class="container">
-<h2 class="projects-title"></h2>
-<input class="searchBar" placeholder="Search projects..." data-aos="fade-right"/>
-<svg width="200" height="200" data-aos="fade-left"></svg>
-<ul class="legend" data-aos="fade-up"></ul>
-<div class="projects" data-aos="fade-up"></div>
-</div></section>
-<script type="module" src="projects.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({duration:800,once:true});</script>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Projects - Khushi Raghuvanshi</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" defer src="projects.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">Tableau</a></li>
+      </ul>
+      <a class="btn" href="#projects-list">Contact Me</a>
+    </nav>
+  </header>
+  <section class="projects-list" id="projects-list" data-aos="fade-up">
+    <div class="container">
+      <h2 class="projects-title"></h2>
+      <input class="searchBar" type="text" placeholder="Search projects..." />
+      <svg width="200" height="200"></svg>
+      <ul class="legend"></ul>
+      <div class="projects"></div>
+    </div>
+  </section>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>

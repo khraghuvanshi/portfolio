@@ -1,16 +1,72 @@
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}body{overflow-x:hidden;}
-:root{--blue:#4a79a1;--yellow:#FFD23F;--dark:#111;}
-.container{width:90%;max-width:1200px;margin:auto;padding:2rem 0;}
-section{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;}
-.hero, .faq{background:var(--blue);color:#fff;}
-.me, .contact{background:#fff;color:#000;}
-header{position:fixed;top:0;width:100%;background:var(--blue);z-index:100;}
-nav{display:flex;justify-content:space-between;padding:1rem 2rem;}
-nav ul{display:flex;gap:1.5rem;list-style:none;}
-nav a{color:#fff;text-decoration:none;font-weight:500;}
-.btn{background:var(--yellow);padding:.8rem 1.2rem;color:var(--dark);text-decoration:none;font-weight:500;box-shadow:4px 4px var(--dark);}
-.hero-inner{display:flex;flex-direction:column;justify-content:space-between;height:calc(100vh-80px);}
-.hero-buttons{display:flex;gap:1rem;justify-content:center;margin-bottom:2rem;}
-.faq-list .faq-item{border-top:1px solid currentColor;padding:1rem 0;}
-.question{display:flex;justify-content:space-between;cursor:pointer;}
-.answer{display:none;padding-top:.5rem;}
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+body { overflow-x: hidden; }
+
+/* Theme colors */
+:root {
+  --blue: #4a79a1;
+  --yellow: #FFD23F;
+  --dark: #111;
+}
+
+/* Container */
+.container { width: 90%; max-width: 1200px; margin: auto; padding: 2rem 0; }
+
+/* Sections */
+section { width: 100%; }
+.hero { background: var(--blue); color: #fff; height: calc(100vh - 70px); display: flex; align-items: center; }
+.hero-inner { display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+.hero-text { max-width: 800px; }
+.hero-text h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero-text p { font-size: 1.2rem; margin-bottom: 2rem; }
+.hero-buttons { display: flex; gap: 1rem; }
+.hero-buttons .btn { margin-bottom: 0; }
+
+/* Alternate backgrounds */
+.me, .top-picks, .contact { background: #fff; color: #000; }
+.projects-section, .faq { background: var(--blue); color: #fff; }
+
+/* Header */
+header { position: fixed; top: 0; left: 0; right: 0; background: var(--blue); z-index: 100; height: 70px; display: flex; align-items: center; }
+nav { width: 90%; max-width: 1200px; margin: auto; display: flex; justify-content: space-between; }
+nav ul { list-style: none; display: flex; gap: 1.5rem; }
+nav a { color: #fff; text-decoration: none; font-weight: 500; }
+.btn { background: var(--yellow); color: var(--dark); text-decoration: none; padding: 0.8rem 1.2rem; font-weight: 500; box-shadow: 4px 4px var(--dark); }
+
+/* Me entries */
+.me h2 { text-align: center; margin-bottom: 2rem; font-size: 2.5rem; }
+.entry { display: flex; align-items: center; border-top: 1px solid currentColor; padding: 1.5rem 0; }
+.entry img { width: 80px; height: 80px; object-fit: cover; margin-right: 1rem; }
+.entry-content h3 { font-size: 1.5rem; }
+.entry-content .date { color: #467069; }
+.arrow { font-size: 2rem; color: #467069; }
+
+/* Projects shine */
+.projects-content { display: flex; align-items: center; gap: 2rem; }
+.projects-content img { width: 50%; border-radius: 8px; }
+.projects-content div { flex: 1; }
+
+/* Top picks */
+.top-picks .container { text-align: center; }
+.top-picks h2 { font-size: 2.5rem; margin-bottom: 2rem; }
+.cards { display: flex; gap: 2rem; justify-content: center; }
+.card { background: #fff; color: var(--dark); padding: 1.5rem; border: 1px solid currentColor; box-shadow: 4px 4px var(--dark); width: 250px; }
+.check { font-size: 3rem; color: #467069; margin-bottom: 1rem; }
+
+/* FAQ */
+.faq .container { padding-bottom: 4rem; }
+.faq h2 { font-size: 2.5rem; margin-bottom: 1rem; text-align: center; }
+.ask { margin-bottom: 1rem; display: inline-block; }
+.faq-list .faq-item { border-top: 1px solid currentColor; padding: 1rem 0; }
+.question { display: flex; justify-content: space-between; cursor: pointer; }
+.answer { display: none; padding-top: 0.5rem; }
+
+/* Contact */
+.contact-content { display: flex; gap: 2rem; align-items: flex-start; }
+iframe { flex: 1; height: 400px; border: none; }
+form { flex: 1; display: flex; flex-direction: column; gap: 1rem; }
+.field label { font-weight: 500; }
+.field input, .field textarea { border: none; border-bottom: 1px solid currentColor; padding: 0.5rem; }
+
+/* Animations & icons adjust */
+.material-icons { vertical-align: middle; }

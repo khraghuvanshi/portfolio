@@ -1,41 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio</title>
-<link rel="stylesheet" href="style.css">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Khushi Raghuvanshi Portfolio</title>
+<link rel="stylesheet" href="style.css" />
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head><body>
-<header data-aos="fade-down"><nav><ul>
-<li><a href="#">LinkedIn</a></li><li><a href="#">GitHub</a></li><li><a href="#">Tableau</a></li>
-<li><a href="projects.html">Projects</a></li></ul><a class="btn" href="#contact">Contact Me</a></nav></header>
-<section class="hero" data-aos="fade-up">
-<div class="container hero-inner">
-<h1>Hello World, I'm Khushi :)</h1>
-<p>I'm a recent graduate from UC San Diego... Keep scrolling to explore my interests and work below!</p>
-<div class="hero-buttons">
-<a class="btn" href="Khushi_Raghuvanshi_Resume.pdf" download>Resume</a>
-<a class="btn" href="projects.html">Projects</a>
-</div></div></section>
-<section class="me" data-aos="fade-up"><div class="container">
-<h2>Me</h2><div class="entry" data-aos="fade-right"><img src="images/data.jpg"><div class="entry-content">
-<h3>Data</h3><span class="date">2023-10-26</span><p>My Tableau creations are so good, they might just make you cry.</p>
-</div><span class="material-icons arrow">open_in_new</span></div>
-</div></section>
-<section class="faq" data-aos="fade-up"><div class="container">
-<h2>Questions?</h2><a class="btn ask" href="#contact">AskMe</a>
-<div class="faq-list">
-<div class="faq-item"><div class="question">What’s your favorite tech? <span class="toggle">+</span></div><div class="answer"><p>I'm all about Python & JS.</p></div></div>
-</div></div></section>
-<section class="contact" id="contact" data-aos="fade-up"><div class="container contact-content">
-<iframe src="" loading="lazy"></iframe>
-<form data-aos="fade-left"><h2>Let's Chat</h2>
-<div class="field"><label>Name</label><input/></div>
-<div class="field"><label>Email</label><input/></div>
-<div class="field"><label>Message</label><textarea></textarea></div>
-<button class="btn send">Send It!</button>
-</form></div></section>
+</head>
+<body>
+<header data-aos="fade-down">
+  <nav>
+    <ul>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">GitHub</a></li>
+      <li><a href="#">Tableau</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+    <a class="btn" href="#contact">Contact Me</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner" data-aos="fade-up">
+    <div class="hero-text">
+      <h1>Hello World, I’m Khushi :)</h1>
+      <p>I’m a recent graduate from UC San Diego with a B.S. in Cognitive Science, specializing in Machine Learning and a minor in Data Science. I like making data simple. Keep scrolling to explore my interests and work below!</p>
+    </div>
+    <div class="hero-buttons">
+      <a class="btn" href="Khushi_Raghuvanshi_Resume.pdf" download>Resume</a>
+      <a class="btn" href="projects.html">Projects</a>
+    </div>
+  </div>
+</section>
+
+<section class="me" id="me">
+  <div class="container" data-aos="fade-up">
+    <h2>Me</h2>
+    <div class="entry" data-aos="fade-right">
+      <img src="images/data.jpg" alt="Data">
+      <div class="entry-content">
+        <h3>Data</h3>
+        <span class="date">2023-10-26</span>
+        <p>Visualizing insights. My Tableau creations are so good, they might just make you cry.</p>
+      </div>
+      <span class="material-icons arrow">open_in_new</span>
+    </div>
+    <div class="entry" data-aos="fade-right" data-aos-delay="100">
+      <img src="images/data.jpg" alt="Data">
+      <div class="entry-content">
+        <h3>Data</h3>
+        <span class="date">2023-10-26</span>
+        <p>Visualizing insights. My Tableau creations are so good, they might just make you cry.</p>
+      </div>
+      <span class="material-icons arrow">open_in_new</span>
+    </div>
+    <div class="entry" data-aos="fade-right" data-aos-delay="200">
+      <img src="images/art.jpg" alt="Art">
+      <div class="entry-content">
+        <h3>Art</h3>
+        <span class="date">2023-10-25</span>
+        <p>When I’m not coding, I’m probably painting something wild. Art is my escape from the matrix.</p>
+      </div>
+      <span class="material-icons arrow">open_in_new</span>
+    </div>
+  </div>
+</section>
+
+<section class="projects-section">
+  <div class="container projects-content" data-aos="fade-up">
+    <div>
+      <p>My Work</p>
+      <h2>Projects That Shine</h2>
+      <p>Witness the magic! These are the projects that define my professional prowess. Prepare to be amazed.</p>
+      <a class="btn" href="projects.html">View All</a>
+    </div>
+    <img src="images/projects.jpg" alt="Projects">
+  </div>
+</section>
+
+<section class="top-picks" id="top-picks">
+  <div class="container" data-aos="fade-up">
+    <h2>Top Picks</h2>
+    <div class="cards">
+      <div class="card" data-aos="flip-left">
+        <span class="material-icons check">check</span>
+        <h3>Project Alpha</h3>
+        <p>A groundbreaking application that redefined user interaction. It’s so good, competitors are still trying to copy it.</p>
+        <a class="btn details" href="#">Details</a>
+      </div>
+      <div class="card" data-aos="flip-left" data-aos-delay="100">
+        <span class="material-icons check">check</span>
+        <h3>Data Viz</h3>
+        <p>An interactive dashboard that makes complex data look like child’s play. Prepare for visual enlightenment.</p>
+        <a class="btn details" href="#">Details</a>
+      </div>
+      <div class="card" data-aos="flip-left" data-aos-delay="200">
+        <span class="material-icons check">check</span>
+        <h3>Code Repo</h3>
+        <p>My GitHub is a treasure trove of innovation. Come see the raw talent that powers my creations.</p>
+        <a class="btn details" href="#">Details</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container" data-aos="fade-up">
+    <h2>Questions?</h2>
+    <a class="btn ask" href="#contact">AskMe</a>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="question">What’s your favorite tech? <span class="toggle">+</span></div>
+        <div class="answer"><p>I'm all about Python & JavaScript.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="question">Favorite visualization currently? <span class="toggle">+</span></div>
+        <div class="answer"><p>Who’s who guide to the Marvel universe.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="question">Favorite programming language? <span class="toggle">+</span></div>
+        <div class="answer"><p>Python, obviously.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="question">Any hidden talents? <span class="toggle">+</span></div>
+        <div class="answer"><p>I can juggle three oranges without dropping.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="question">What’s next? <span class="toggle">+</span></div>
+        <div class="answer"><p>A data-driven future, one viz at a time.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-content" data-aos="fade-up">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen></iframe>
+    <form data-aos="fade-left">
+      <h2>Let's Chat (or Don’t)</h2>
+      <div class="field"><label>Name</label><input type="text"></div>
+      <div class="field"><label>Email</label><input type="email"></div>
+      <div class="field"><label>Message</label><textarea></textarea></div>
+      <button class="btn send">Send It!</button>
+    </form>
+  </div>
+</section>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="script.js"></script><script>AOS.init({duration:800,once:true});</script>
-</body></html>
+<script src="script.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+</script>
+</body>
+</html>
