@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Khushi Raghuvanshi Portfolio</title>
-<link rel="stylesheet" href="style.css" />
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Khushi Raghuvanshi Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-<header data-aos="fade-down">
+<header>
   <nav>
     <ul>
       <li><a href="#">LinkedIn</a></li>
       <li><a href="#">GitHub</a></li>
       <li><a href="#">Tableau</a></li>
-      <li><a href="projects.html">Projects</a></li>
+      <li><a href="#projects">Projects</a></li>
     </ul>
     <a class="btn" href="#contact">Contact Me</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div class="container hero-inner" data-aos="fade-up">
+  <div class="container hero-inner">
     <div class="hero-text">
       <h1>Hello World, I’m Khushi :)</h1>
       <p>I’m a recent graduate from UC San Diego with a B.S. in Cognitive Science, specializing in Machine Learning and a minor in Data Science. I like making data simple. Keep scrolling to explore my interests and work below!</p>
     </div>
     <div class="hero-buttons">
       <a class="btn" href="Khushi_Raghuvanshi_Resume.pdf" download>Resume</a>
-      <a class="btn" href="projects.html">Projects</a>
+      <a class="btn" href="#projects">Projects</a>
     </div>
   </div>
 </section>
 
 <section class="me" id="me">
-  <div class="container" data-aos="fade-up">
+  <div class="container">
     <h2>Me</h2>
-    <div class="entry" data-aos="fade-right">
+    <div class="entry">
       <img src="images/data.jpg" alt="Data">
       <div class="entry-content">
         <h3>Data</h3>
@@ -47,7 +47,7 @@
       </div>
       <span class="material-icons arrow">open_in_new</span>
     </div>
-    <div class="entry" data-aos="fade-right" data-aos-delay="100">
+    <div class="entry">
       <img src="images/data.jpg" alt="Data">
       <div class="entry-content">
         <h3>Data</h3>
@@ -56,7 +56,7 @@
       </div>
       <span class="material-icons arrow">open_in_new</span>
     </div>
-    <div class="entry" data-aos="fade-right" data-aos-delay="200">
+    <div class="entry">
       <img src="images/art.jpg" alt="Art">
       <div class="entry-content">
         <h3>Art</h3>
@@ -68,35 +68,47 @@
   </div>
 </section>
 
-<section class="projects-section">
-  <div class="container projects-content" data-aos="fade-up">
-    <div>
-      <p>My Work</p>
-      <h2>Projects That Shine</h2>
-      <p>Witness the magic! These are the projects that define my professional prowess. Prepare to be amazed.</p>
-      <a class="btn" href="projects.html">View All</a>
+<!-- Dynamic Stripe-like projects carousel -->
+<section class="projects-section" id="projects">
+  <div class="container">
+    <div class="projects-header">
+      <div>
+        <h2>Projects That Shine</h2>
+        <p>These are my favorite builds. Swipe, drag, or use the arrows to explore.</p>
+      </div>
+      <div class="carousel-controls">
+        <button class="ctrl prev" aria-label="Previous">
+          <span class="material-icons">arrow_back</span>
+        </button>
+        <button class="ctrl next" aria-label="Next">
+          <span class="material-icons">arrow_forward</span>
+        </button>
+      </div>
     </div>
-    <img src="images/projects.jpg" alt="Projects">
+
+    <div class="carousel" id="projectsCarousel" aria-label="Projects carousel">
+      <div class="track" id="projectsTrack" tabindex="0"></div>
+    </div>
   </div>
 </section>
 
 <section class="top-picks" id="top-picks">
-  <div class="container" data-aos="fade-up">
+  <div class="container">
     <h2>Top Picks</h2>
     <div class="cards">
-      <div class="card" data-aos="flip-left">
+      <div class="card">
         <span class="material-icons check">check</span>
         <h3>Project Alpha</h3>
         <p>A groundbreaking application that redefined user interaction. It’s so good, competitors are still trying to copy it.</p>
         <a class="btn details" href="#">Details</a>
       </div>
-      <div class="card" data-aos="flip-left" data-aos-delay="100">
+      <div class="card">
         <span class="material-icons check">check</span>
         <h3>Data Viz</h3>
         <p>An interactive dashboard that makes complex data look like child’s play. Prepare for visual enlightenment.</p>
         <a class="btn details" href="#">Details</a>
       </div>
-      <div class="card" data-aos="flip-left" data-aos-delay="200">
+      <div class="card">
         <span class="material-icons check">check</span>
         <h3>Code Repo</h3>
         <p>My GitHub is a treasure trove of innovation. Come see the raw talent that powers my creations.</p>
@@ -107,7 +119,7 @@
 </section>
 
 <section class="faq">
-  <div class="container" data-aos="fade-up">
+  <div class="container">
     <h2>Questions?</h2>
     <a class="btn ask" href="#contact">AskMe</a>
     <div class="faq-list">
@@ -136,9 +148,9 @@
 </section>
 
 <section class="contact" id="contact">
-  <div class="container contact-content" data-aos="fade-up">
+  <div class="container contact-content">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen></iframe>
-    <form data-aos="fade-left">
+    <form>
       <h2>Let's Chat (or Don’t)</h2>
       <div class="field"><label>Name</label><input type="text"></div>
       <div class="field"><label>Email</label><input type="email"></div>
@@ -150,8 +162,6 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>
-<script>
-  AOS.init({ duration: 800, once: true });
-</script>
+<script>AOS.init({ duration: 800, once: true });</script>
 </body>
 </html>
