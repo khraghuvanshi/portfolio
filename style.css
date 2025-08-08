@@ -150,7 +150,8 @@ section.top-picks > p {
   color: #fff;
 }
 
-
+section.top-picks h2 { color: #fff !important; }
+/* Certificates */
 .certificates {
     background-color: #4a79a1; /* same blue as top */
     color: white;
