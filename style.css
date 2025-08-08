@@ -113,6 +113,7 @@ section { padding-top: 90px; }
     background-color: #4a79a1; /* same blue as top */
     color: white;
     padding: 40px 20px;
+    text-align: center;   /* centers the heading/paragraphs */
 }
 
 .certificates-grid {
@@ -128,6 +129,10 @@ section { padding-top: 90px; }
     border-radius: 10px;
     width: 250px;
     text-align: center;
+}
+
+.certificates h2 {
+  text-align: center;
 }
 
 

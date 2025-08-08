@@ -159,15 +159,31 @@
 
 <section class="contact" id="contact">
   <div class="container contact-content">
-    <form id = "contactForm">
+    <form id="contactForm"
+        action="mailto:khraghuvanshi13@gmail.com"
+        method="POST"
+        enctype="text/plain">
       <h2>Let's Chat!</h2>
       <p>Email me at: <a href="mailto:khraghuvanshi13@gmail.com">khraghuvanshi13@gmail.com</a></p>
       <p>Or fill out the form:</p>
-      <div class="field"><label>Name</label><input type="text"></div>
-      <div class="field"><label>Email</label><input type="email"></div>
-      <div class="field"><label>Message</label><textarea></textarea></div>
-      <button class="btn send" type="'submit">Send It!</button>
-    </form>
+
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+
+      <button class="btn send" type="submit">Send It!</button>
+</form>
   </div>
 </section>
 

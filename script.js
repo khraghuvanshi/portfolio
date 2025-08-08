@@ -10,6 +10,7 @@ document.querySelectorAll('.faq-item').forEach(item => {
 });
 
 // Projects carousel (Stripe-like) - dynamic from JSON
+// Projects carousel (Stripe-like) - dynamic from JSON
 (async function initProjects() {
   const track = document.getElementById('projectsTrack');
   if (!track) return;
@@ -47,7 +48,7 @@ document.querySelectorAll('.faq-item').forEach(item => {
 
       const link = document.createElement('a');
       link.className = 'btn project-link';
-      link.href = p.link;
+      link.href = p.link || '#';
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
       link.textContent = 'Learn more';
@@ -59,43 +60,58 @@ document.querySelectorAll('.faq-item').forEach(item => {
 
     if (window.AOS) AOS.refresh();
 
-    // Horizontal controls + drag
+    // Controls
     const carousel = document.getElementById('projectsCarousel');
     const prev = document.querySelector('.ctrl.prev');
     const next = document.querySelector('.ctrl.next');
-
     const scrollByAmount = () => Math.min(carousel.clientWidth * 0.9, 800);
 
-    prev.addEventListener('click', () => track.scrollBy({ left: -scrollByAmount(), behavior: 'smooth' }));
-    next.addEventListener('click', () => track.scrollBy({ left:  scrollByAmount(), behavior: 'smooth' }));
+    if (prev) prev.addEventListener('click', () => {
+      track.scrollBy({ left: -scrollByAmount(), behavior: 'smooth' });
+    });
+    if (next) next.addEventListener('click', () => {
+      track.scrollBy({ left:  scrollByAmount(), behavior: 'smooth' });
+    });
 
-    // Drag to scroll
-    let isDown = false, startX = 0, scrollLeft = 0;
+    // Drag to scroll — but DO NOT hijack clicks on links
+    let isDown = false, startX = 0, startScroll = 0;
+
     track.addEventListener('pointerdown', (e) => {
+      if (e.target.closest('a')) return; // don't start drag when clicking a link
       isDown = true;
       startX = e.clientX;
-      scrollLeft = track.scrollLeft;
+      startScroll = track.scrollLeft;
       track.setPointerCapture(e.pointerId);
       track.style.cursor = 'grabbing';
     });
+
     track.addEventListener('pointermove', (e) => {
       if (!isDown) return;
       const dx = e.clientX - startX;
-      track.scrollLeft = scrollLeft - dx;
-    });
-    ['pointerup','pointercancel','pointerleave'].forEach(ev => {
-      track.addEventListener(ev, () => { isDown = false; track.style.cursor = 'auto'; });
+      track.scrollLeft = startScroll - dx;
     });
 
-    // Keyboard support
-    track.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight') track.scrollBy({ left: 300, behavior: 'smooth' });
-      if (e.key === 'ArrowLeft')  track.scrollBy({ left: -300, behavior: 'smooth' });
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach(ev => {
+      track.addEventListener(ev, () => {
+        isDown = false;
+        track.style.cursor = 'auto';
+      });
     });
-  } catch (e) {
-    console.error('Failed to load projects.json', e);
+
+    // Safety: ensure clicking the button always opens a new tab
+    track.addEventListener('click', (e) => {
+      const a = e.target.closest('a.project-link');
+      if (!a) return;
+      // Some browsers may still treat this as a drag-end; force open:
+      e.preventDefault();
+      window.open(a.href, '_blank', 'noopener');
+    });
+
+  } catch (err) {
+    console.error('Failed to load projects.json', err);
   }
 })();
+
 
 // Let's Chat email redirect
 document.addEventListener('DOMContentLoaded', () => {
