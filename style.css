@@ -8,14 +8,49 @@ body { overflow-x: hidden; }
   --dark: #111;
   --card-bg: #fff;
   --card-shadow: 0 10px 25px rgba(0,0,0,.08);
+  --header-h: 96px;     /* <- make this bigger/smaller to taste (e.g., 80–120px) */
+  --nav-font: 18px; /* <- adjust for larger/smaller text */
 }
 
 /* Header */
-header { position: fixed; top: 0; left: 0; right: 0; height: 70px; background: var(--blue); z-index: 100; display: flex; align-items: center; }
-nav { width: 90%; max-width: 1200px; margin: auto; display: flex; justify-content: space-between; }
-nav ul { list-style: none; display: flex; gap: 1.5rem; }
-nav a { color: #fff; text-decoration: none; font-weight: 500; }
-.btn { background: var(--yellow); color: var(--dark); text-decoration: none; padding: .8rem 1.2rem; font-weight: 500; box-shadow: 4px 4px var(--dark); }
+header { 
+  position: fixed; 
+  top: 0; left: 0; right: 0; 
+  height: var(--header-h);
+  background: var(--blue); 
+  z-index: 100; 
+  display: flex; 
+  align-items: center; }
+  
+nav { 
+  width: 90%; 
+  max-width: 1200px; 
+  margin: auto; 
+  display: flex; 
+  justify-content: space-between; 
+  padding: 1.25rem 2.5rem; 
+}
+
+nav ul { 
+  list-style: none; 
+  display: flex; 
+  gap: 2rem; }
+
+nav a { 
+  color: #fff; 
+  text-decoration: none; 
+  font-weight: 500;
+  font-size: var(--nav-font);
+  line-height: 1;
+}
+
+header .btn{
+  padding: 0.9rem 1.4rem;
+  font-size: 16px;
+}
+
+.btn { 
+  background: var(--yellow); color: var(--dark); text-decoration: none; padding: .8rem 1.2rem; font-weight: 500; box-shadow: 4px 4px var(--dark); }
 
 /* Container & Sections */
 .container { width: 90%; max-width: 1200px; margin: auto; padding: 2rem 0; }
