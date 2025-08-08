@@ -143,6 +143,12 @@ section { padding-top: 90px; }
 .check { font-size: 3rem; color: #467069; margin-bottom: 1rem; }
 .card p { flex: 1; line-height: 1.4; }
 .card .btn { margin-top: 1rem; }
+/* Make "Top Project Picks" heading (and any section intro text) white */
+section.top-picks { background: var(--blue); }
+section.top-picks h2,
+section.top-picks > p {
+  color: #fff;
+}
 
 
 .certificates {
