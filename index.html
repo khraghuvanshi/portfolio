@@ -62,30 +62,6 @@
   </div>
 </section>
 
-<!-- Dynamic Stripe-like projects carousel -->
-<section class="projects-section" id="projects">
-  <div class="container">
-    <div class="projects-header">
-      <div>
-        <h2>My Projects</h2>
-        <p>These are my favorite builds. Swipe, drag, or use the arrows to explore.</p>
-      </div>
-      <div class="carousel-controls">
-        <button class="ctrl prev" aria-label="Previous">
-          <span class="material-icons">arrow_back</span>
-        </button>
-        <button class="ctrl next" aria-label="Next">
-          <span class="material-icons">arrow_forward</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="carousel" id="projectsCarousel" aria-label="Projects carousel">
-      <div class="track" id="projectsTrack" tabindex="0"></div>
-    </div>
-  </div>
-</section>
-
 <section class="top-picks" id="top-picks">
   <div class="container">
     <h2>Top Picks</h2>
@@ -111,6 +87,46 @@
     </div>
   </div>
 </section>
+
+<!-- Dynamic Stripe-like projects carousel -->
+<section class="projects-section" id="projects">
+  <div class="container">
+    <div class="projects-header">
+      <div>
+        <h2>My Projects</h2>
+        <p>These are my favorite builds. Swipe, drag, or use the arrows to explore.</p>
+      </div>
+      <div class="carousel-controls">
+        <button class="ctrl prev" aria-label="Previous">
+          <span class="material-icons">arrow_back</span>
+        </button>
+        <button class="ctrl next" aria-label="Next">
+          <span class="material-icons">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="carousel" id="projectsCarousel" aria-label="Projects carousel">
+      <div class="track" id="projectsTrack" tabindex="0"></div>
+    </div>
+  </div>
+</section>
+
+<section class="certificates">
+  <h2>Certificates</h2>
+  <div class="certificates-grid">
+    <div class="certificate-card">
+      <h3>Google Analytics</h3>
+      <p>Issued by Google, 2024</p>
+    </div>
+    <div class="certificate-card">
+      <h3>Tableau Specialist</h3>
+      <p>Issued by Tableau, 2024</p>
+    </div>
+    <!-- Add more as needed -->
+  </div>
+</section>
+
 
 <section class="faq">
   <div class="container">
@@ -143,8 +159,10 @@
 
 <section class="contact" id="contact">
   <div class="container contact-content">
-    <form>
-      <h2>Let's Chat (or Don’t)</h2>
+    <form id = "contactForm">
+      <h2>Let's Chat!</h2>
+      <p>Email me at: <a href="mailto:khraghuvanshi13@gmail.com">khraghuvanshi13@gmail.com</a></p>
+      <p>Or fill out the form:</p>
       <div class="field"><label>Name</label><input type="text"></div>
       <div class="field"><label>Email</label><input type="email"></div>
       <div class="field"><label>Message</label><textarea></textarea></div>

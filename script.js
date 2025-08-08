@@ -47,7 +47,7 @@ document.querySelectorAll('.faq-item').forEach(item => {
 
       const link = document.createElement('a');
       link.className = 'btn project-link';
-      link.href = p.link || '#';
+      link.href = p.link;
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
       link.textContent = 'Learn more';
@@ -96,3 +96,21 @@ document.querySelectorAll('.faq-item').forEach(item => {
     console.error('Failed to load projects.json', e);
   }
 })();
+
+// Let's Chat email redirect
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.getElementById('contactForm');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const mailtoLink = `mailto:khraghuvanshi13@gmail.com?subject=Message from ${encodeURIComponent(name)} (${encodeURIComponent(email)})&body=${encodeURIComponent(message)}`;
+      window.location.href = mailtoLink;
+    });
+  }
+});

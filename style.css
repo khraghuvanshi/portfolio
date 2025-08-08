@@ -29,9 +29,9 @@ section { padding-top: 90px; }
 .hero-buttons { display: flex; gap: 1rem; }
 
 /* Alternate backgrounds */
-.me, .top-picks, .contact { background: #fff; color: #000; }
+.me, .contact { background: #fff; color: #000; }
 .projects-section, .faq { background: #f6f8fb; color: #0b1628; } /* lighter than hero for contrast */
-
+.top-picks { background: #4a79a1; color: #0b1628; }
 /* Me section */
 .me h2 { text-align: center; margin-bottom: 2rem; font-size: 2.5rem; }
 .entry { display: flex; align-items: center; border-top: 1px solid currentColor; padding: 1.5rem 0; }
@@ -43,6 +43,10 @@ section { padding-top: 90px; }
 /* Projects (Stripe-like carousel) */
 .projects-header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1rem; }
 .projects-header h2 { font-size: 2.4rem; margin-bottom: .3rem; }
+.projects h2 {
+    text-align: center;
+}
+
 .carousel-controls { display: flex; gap: .5rem; }
 .ctrl { border: none; background: #e9e9ff; width: 38px; height: 38px; border-radius: 999px; display: grid; place-items: center; cursor: pointer; }
 .ctrl:active { transform: scale(.97); }
@@ -88,6 +92,29 @@ section { padding-top: 90px; }
 .check { font-size: 3rem; color: #467069; margin-bottom: 1rem; }
 .card p { flex: 1; line-height: 1.4; }
 .card .btn { margin-top: 1rem; }
+
+
+.certificates {
+    background-color: #4a79a1; /* same blue as top */
+    color: white;
+    padding: 40px 20px;
+}
+
+.certificates-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.certificate-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
 
 /* FAQ */
 .faq .container { padding-bottom: 4rem; }
