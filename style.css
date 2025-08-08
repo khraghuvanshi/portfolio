@@ -41,11 +41,25 @@ section { padding-top: 90px; }
 .arrow { font-size: 2rem; color: #467069; }
 
 /* Projects (Stripe-like carousel) */
-.projects-header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1rem; }
-.projects-header h2 { font-size: 2.4rem; margin-bottom: .3rem; }
-/* .projects h2 {
-    text-align: center;
-} */
+/* Projects (Stripe-like carousel) */
+.projects-header {
+  display: flex;
+  flex-direction: column;      /* stack title/desc above controls */
+  align-items: center;         /* center horizontally */
+  justify-content: center;     /* center vertically within header */
+  gap: .5rem;
+  margin-bottom: 1rem;
+  text-align: center;          /* center the text inside */
+}
+.projects-header h2 {
+  font-size: 2.4rem;
+  margin-bottom: .3rem;
+  text-align: center;          /* ensure centered even if other rules exist */
+}
+.projects-header p {
+  max-width: 800px;
+  text-align: center;
+}
 
 .carousel-controls { display: flex; gap: .5rem; }
 .ctrl { border: none; background: #e9e9ff; width: 38px; height: 38px; border-radius: 999px; display: grid; place-items: center; cursor: pointer; }
