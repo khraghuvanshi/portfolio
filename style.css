@@ -30,7 +30,7 @@ section { padding-top: 90px; }
 
 /* Alternate backgrounds */
 .me, .contact { background: #fff; color: #000; }
-.projects-section, .faq { background: #f6f8fb; color: #ffffff; } /* lighter than hero for contrast */
+.projects-section, .faq { background: #f6f8fb; color: #000000; } /* lighter than hero for contrast */
 .top-picks { background: #4a79a1; color: #0b1628; }
 /* Me section */
 .me h2 { text-align: center; margin-bottom: 2rem; font-size: 2.5rem; }
