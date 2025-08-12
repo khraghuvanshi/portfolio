@@ -10,7 +10,8 @@
   --panel: #111114;
   --text: #eaeaf0;
   --muted: #a1a1b3;
-  --brand: #8c7cf0;
+  /* was: --brand: #8c7cf0; */
+  --brand: #82bcff;   /* pick your blue */
   --stroke: #23232a;
   --radius: 16px;
   --shadow-strong: 0 10px 30px rgba(0, 0, 0, .3);
@@ -21,11 +22,13 @@ html, body { height: 100%; }
 body {
   margin: 0;
   /* layered background: 3 soft radial gradients + solid base */
+
   background:
-    radial-gradient(700px 340px at 12% 6%,  rgba(140,124,240, .12), transparent 60%),
-    radial-gradient(560px 260px at 88% 18%, rgba(140,124,240, .10), transparent 60%),
-    radial-gradient(520px 280px at 24% 86%, rgba(140,124,240, .10), transparent 60%),
+    radial-gradient(700px 340px at 12% 6%,  rgba(90,168,255, .12), transparent 60%),
+    radial-gradient(560px 260px at 88% 18%, rgba(90,168,255, .10), transparent 60%),
+    radial-gradient(520px 280px at 24% 86%, rgba(90,168,255, .10), transparent 60%),
     var(--bg) !important;
+
   color: var(--text);
   line-height: 1.6;
   letter-spacing: .01em;
