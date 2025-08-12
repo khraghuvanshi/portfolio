@@ -2,14 +2,14 @@
   {
   "title": "Formula 1 Circuits & Driver Stats Dashboard",
   "year": "2025",
-  "image": "https://opengraph.githubassets.com/1/khraghuvanshi/formula1-dashboard",
+  "image": "https://public.tableau.com/views/F-1Tracks/Tracks?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
   "description": "An interactive Tableau dashboard exploring Formula 1 circuits worldwide and per-track stats (most wins, podiums, fastest laps). Built by cleaning and preparing 1M+ rows of race data in Python and Excel, mapping circuits precisely with custom GeoJSON, and designing an intuitive flow for detailed track views—making global racing history more accessible for fans and analysts.",
-  "link": "http://bit.ly/4lggukf"
+  "link": "https://public.tableau.com/views/F-1Tracks/Tracks?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
   },
   {
     "title": "Love Island USA Season 7 Visualization",
     "year": "2025",
-    "image": "https://opengraph.githubassets.com/1/khraghuvanshi/love-island-visualization",
+    "image": "images/loveisland.png",
     "description": "An interactive, web-based data visualization project exploring relationship dynamics and contestant timelines from Season 7 of Love Island USA. Built with Next.js, D3.js, and TypeScript, the site visualizes contestant entries and couple formations over time using a force-directed graph.",
     "link": "https://love-island-visualization-git-main-khraghuvanshis-projects.vercel.app"
   },
