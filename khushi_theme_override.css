@@ -1,109 +1,128 @@
 
-/* === Khushi Theme Override for trial_portfolio ===
-   Drop this file next to trial_portfolio/style.css and load it AFTER, e.g.:
-   <link rel="stylesheet" href="style.css" />
-   <link rel="stylesheet" href="khushi_theme_override.css" />
+/* === Khushi Theme Override v2 (Neutral) ===
+   Load AFTER your existing style.css
 */
 
-/* 1) Color System — mirrors khushi_portfolio */
 :root {
   --bg: #0b0b0c;
   --panel: #111114;
   --text: #eaeaf0;
   --muted: #a1a1b3;
-  --brand: #8c7cf0;
+  --brand: #8c7cf0;   /* accent only, no blue/purple washes */
   --stroke: #23232a;
+  --radius: 16px;
   --shadow-strong: 0 10px 30px rgba(0, 0, 0, .3);
 }
 
-/* 2) Base + Typography */
+/* 1) Base: remove any tinted gradients/blue washes */
 html, body { height: 100%; }
 body {
-  background: radial-gradient(1200px 600px at 10% -20%, rgba(140, 124, 240, .15), transparent 60%), var(--bg);
+  margin: 0;
+  background: var(--bg) !important; /* Solid, neutral dark */
   color: var(--text);
   line-height: 1.6;
   letter-spacing: .01em;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial;
 }
 
-/* Apply bit-font to headings to match khushi_portfolio vibe */
+/* 2) Headings — keep the khushi vibe but cleaner */
 h1, h2, h3, .mega {
   font-family: "Press Start 2P", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial;
   letter-spacing: .01em;
 }
 
-/* 3) Header / Nav */
-header {
-  background: linear-gradient(to bottom, rgba(11, 11, 12, .75), rgba(11, 11, 12, .4) 70%, transparent);
-  border-bottom: 1px solid var(--stroke);
-  backdrop-filter: saturate(1.2) blur(8px);
+/* 3) Kill stray borders/lines so sections flow */
+.section, section {
+  border: 0 !important;
+  background: transparent !important; /* default to transparent so it flows over body */
 }
-nav a { color: var(--text); }
-nav a:hover { opacity: .9; }
+/* If you prefer cards-on-panels look, uncomment:
+section { background: var(--panel) !important; }
+*/
 
-/* 4) Sections */
-section { background: transparent; } /* default transparent over the body gradient */
-.me, .contact, .projects-section, .faq, .top-picks {
-  background: var(--panel);
-  color: var(--text);
+/* 4) Force neutral backgrounds in areas that had blue previously */
+.top-picks,
+.projects-section,
+.hero,
+.faq,
+.contact,
+.me {
+  background: transparent !important;
 }
 
-/* 5) Cards / Surfaces */
-:root {
-  /* Override trial variables so existing components inherit the new theme */
-  --card-bg: var(--panel);
-}
+/* Cards/surfaces */
 .project-card, .card, .faq-item, .certificate-card {
   background: var(--panel) !important;
-  color: var(--text);
-  border: 1px solid var(--stroke);
+  color: var(--text) !important;
+  border: 1px solid var(--stroke) !important;
+  border-radius: var(--radius);
   box-shadow: var(--shadow-strong);
 }
-/* Accent strip on project cards */
 .project-card { border-top: 6px solid var(--brand); }
 .project-title { color: var(--text) !important; }
 .project-desc, .project-meta { color: var(--muted) !important; }
 
-/* 6) Hero */
-.hero {
-  background: transparent !important;
-  color: var(--text);
+/* 5) Header / Nav */
+header {
+  background: rgba(11, 11, 12, .7);
+  border-bottom: 1px solid var(--stroke);
+  backdrop-filter: saturate(1.1) blur(8px);
 }
+nav a { color: var(--text); text-decoration: none; }
+nav a:hover { opacity: .9; }
 
-/* 7) Buttons & Links */
+/* 6) Buttons & Links */
 .btn, button, .project-link a, .ctrl {
   background: var(--brand) !important;
   color: var(--text) !important;
   border: 1px solid var(--stroke) !important;
-  box-shadow: none !important;
+  border-radius: 999px;
+  transition: transform .12s ease, filter .2s ease;
 }
-.btn:hover, button:hover, .ctrl:hover {
-  filter: brightness(1.05);
-}
-
-/* 8) Accents used in trial */
-.entry .date, .project-meta, .arrow { color: var(--muted) !important; }
+.btn:hover, button:hover, .ctrl:hover { filter: brightness(1.05); transform: translateY(-1px); }
+.btn:focus-visible, button:focus-visible, .ctrl:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
 a { color: var(--brand); }
 a:hover { opacity: .9; }
 
-/* 9) Carousels / Scrollbars */
-.track::-webkit-scrollbar { height: 10px; }
-.track::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 999px; }
-.carousel-controls .ctrl { border-radius: 999px; }
-.carousel-controls .ctrl .material-icons { vertical-align: middle; }
-
-/* 10) Forms */
+/* 7) Forms */
 .contact input, .contact textarea {
-  background: #0f0f12;
-  color: var(--text);
-  border: 1px solid var(--stroke);
+  background: #0f0f12 !important;
+  color: var(--text) !important;
+  border: 1px solid var(--stroke) !important;
+  border-radius: var(--radius);
 }
-.contact label { color: var(--muted); }
+.contact label { color: var(--muted) !important; }
 .contact .send { background: var(--brand) !important; color: var(--text) !important; }
 
-/* 11) Utility: subtle panel separation */
-.container {
-  /* Keep spacing from trial, just ensure contrast looks good */
+/* 8) Carousel polish */
+.carousel-controls .ctrl { border-radius: 999px; }
+.track::-webkit-scrollbar { height: 10px; }
+.track::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 999px; }
+
+/* 9) Scroll Reveal (paired with scroll_reveal.js)
+   - default effect: fade + lift (up)
+   - alternatives via [data-reveal="left|right|down|zoom"]
+*/
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .65s cubic-bezier(.22,.61,.36,1), transform .65s cubic-bezier(.22,.61,.36,1);
+  will-change: opacity, transform;
 }
-/* Optional: thin separators look nicer on dark */
-.entry { border-top: 1px solid var(--stroke) !important; }
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+.reveal.left   { transform: translateX(-24px); }
+.reveal.right  { transform: translateX(24px); }
+.reveal.down   { transform: translateY(-24px); }
+.reveal.zoom   { transform: scale(.96); }
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.in {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
