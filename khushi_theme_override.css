@@ -1,0 +1,109 @@
+
+/* === Khushi Theme Override for trial_portfolio ===
+   Drop this file next to trial_portfolio/style.css and load it AFTER, e.g.:
+   <link rel="stylesheet" href="style.css" />
+   <link rel="stylesheet" href="khushi_theme_override.css" />
+*/
+
+/* 1) Color System — mirrors khushi_portfolio */
+:root {
+  --bg: #0b0b0c;
+  --panel: #111114;
+  --text: #eaeaf0;
+  --muted: #a1a1b3;
+  --brand: #8c7cf0;
+  --stroke: #23232a;
+  --shadow-strong: 0 10px 30px rgba(0, 0, 0, .3);
+}
+
+/* 2) Base + Typography */
+html, body { height: 100%; }
+body {
+  background: radial-gradient(1200px 600px at 10% -20%, rgba(140, 124, 240, .15), transparent 60%), var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  letter-spacing: .01em;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial;
+}
+
+/* Apply bit-font to headings to match khushi_portfolio vibe */
+h1, h2, h3, .mega {
+  font-family: "Press Start 2P", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial;
+  letter-spacing: .01em;
+}
+
+/* 3) Header / Nav */
+header {
+  background: linear-gradient(to bottom, rgba(11, 11, 12, .75), rgba(11, 11, 12, .4) 70%, transparent);
+  border-bottom: 1px solid var(--stroke);
+  backdrop-filter: saturate(1.2) blur(8px);
+}
+nav a { color: var(--text); }
+nav a:hover { opacity: .9; }
+
+/* 4) Sections */
+section { background: transparent; } /* default transparent over the body gradient */
+.me, .contact, .projects-section, .faq, .top-picks {
+  background: var(--panel);
+  color: var(--text);
+}
+
+/* 5) Cards / Surfaces */
+:root {
+  /* Override trial variables so existing components inherit the new theme */
+  --card-bg: var(--panel);
+}
+.project-card, .card, .faq-item, .certificate-card {
+  background: var(--panel) !important;
+  color: var(--text);
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow-strong);
+}
+/* Accent strip on project cards */
+.project-card { border-top: 6px solid var(--brand); }
+.project-title { color: var(--text) !important; }
+.project-desc, .project-meta { color: var(--muted) !important; }
+
+/* 6) Hero */
+.hero {
+  background: transparent !important;
+  color: var(--text);
+}
+
+/* 7) Buttons & Links */
+.btn, button, .project-link a, .ctrl {
+  background: var(--brand) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--stroke) !important;
+  box-shadow: none !important;
+}
+.btn:hover, button:hover, .ctrl:hover {
+  filter: brightness(1.05);
+}
+
+/* 8) Accents used in trial */
+.entry .date, .project-meta, .arrow { color: var(--muted) !important; }
+a { color: var(--brand); }
+a:hover { opacity: .9; }
+
+/* 9) Carousels / Scrollbars */
+.track::-webkit-scrollbar { height: 10px; }
+.track::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 999px; }
+.carousel-controls .ctrl { border-radius: 999px; }
+.carousel-controls .ctrl .material-icons { vertical-align: middle; }
+
+/* 10) Forms */
+.contact input, .contact textarea {
+  background: #0f0f12;
+  color: var(--text);
+  border: 1px solid var(--stroke);
+}
+.contact label { color: var(--muted); }
+.contact .send { background: var(--brand) !important; color: var(--text) !important; }
+
+/* 11) Utility: subtle panel separation */
+.container {
+  /* Keep spacing from trial, just ensure contrast looks good */
+}
+/* Optional: thin separators look nicer on dark */
+.entry { border-top: 1px solid var(--stroke) !important; }
