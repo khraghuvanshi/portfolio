@@ -128,3 +128,18 @@ nav a { color: var(--text) !important; }
   margin-inline: auto;
 }
 
+.kbd-hint{
+  position: fixed; left: 50%; transform: translateX(-50%);
+  bottom: 24px; padding: 8px 14px; border-radius: 9999px;
+  font-size: .95rem; color: var(--muted);
+  background: rgba(17,17,20,.75); border: 1px solid var(--stroke);
+  backdrop-filter: blur(8px) saturate(1.1); z-index: 9999;
+}
+.kbd-hint kbd{
+  font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-weight: 600; font-size: .9rem; padding: 2px 6px; border-radius: 6px;
+  border: 1px solid var(--stroke); background: #0f0f12; color: var(--text);
+}
+@media (max-width:700px){ .kbd-hint{ display:none; } }
+
+
