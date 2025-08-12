@@ -104,3 +104,24 @@ nav a { color: var(--text) !important; }
 @media (prefers-reduced-motion: reduce) {
   body { animation: none !important; }
 }
+
+/* Bigger hero title */
+.hero h1,
+.hero .title,
+.hero .headline,
+.hero .mega {
+  font-size: clamp(2.8rem, 7.2vw, 6.25rem); /* ~45px → 100px depending on screen */
+  line-height: 1.08;
+  letter-spacing: .01em;
+  text-wrap: balance;            /* nicer line breaks */
+  margin-bottom: 1rem;
+}
+
+/* Optional: keep subtext readable but smaller */
+.hero p {
+  font-size: clamp(1.05rem, 1.2vw, 1.35rem);
+  line-height: 1.7;
+  max-width: 68ch;
+  margin-inline: auto;
+}
+
