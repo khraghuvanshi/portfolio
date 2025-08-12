@@ -1,0 +1,106 @@
+
+/* === Khushi Theme Override v2.2 ===
+   - Forces readable light text on dark
+   - Adds subtle purple "spotlights" in the background
+   Load AFTER your existing style.css
+*/
+
+:root {
+  --bg: #0b0b0c;
+  --panel: #111114;
+  --text: #eaeaf0;
+  --muted: #a1a1b3;
+  --brand: #8c7cf0;
+  --stroke: #23232a;
+  --radius: 16px;
+  --shadow-strong: 0 10px 30px rgba(0, 0, 0, .3);
+}
+
+/* 1) Background with subtle purple spotlights (no section wash) */
+html, body { height: 100%; }
+body {
+  margin: 0;
+  /* layered background: 3 soft radial gradients + solid base */
+  background:
+    radial-gradient(700px 340px at 12% 6%,  rgba(140,124,240, .12), transparent 60%),
+    radial-gradient(560px 260px at 88% 18%, rgba(140,124,240, .10), transparent 60%),
+    radial-gradient(520px 280px at 24% 86%, rgba(140,124,240, .10), transparent 60%),
+    var(--bg) !important;
+  color: var(--text);
+  line-height: 1.6;
+  letter-spacing: .01em;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial;
+}
+
+/* Optional: very gentle drift */
+@keyframes spotDrift {
+  0%   { background-position: left top, right top, left bottom, center; }
+  50%  { background-position: left 4% top 2%, right 1% top, left 2% bottom 3%, center; }
+  100% { background-position: left top, right top, left bottom, center; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  body { animation: spotDrift 22s ease-in-out infinite alternate; }
+}
+
+/* 2) Kill stray borders/section fills so nothing looks boxed-in */
+.section, section { border: 0 !important; background: transparent !important; }
+.top-picks, .projects-section, .hero, .faq, .contact, .me { background: transparent !important; }
+
+/* 3) Force readable text (headings, copy, labels, etc.) */
+body, p, h1, h2, h3, h4, h5, h6, li, dt, dd, small, label, span, strong, b, em, figcaption,
+.title, .heading, .card-title, .project-title, .hero h1, .hero p, .desc, .copy, .text,
+.interests, .interests *,
+.hobbies, .hobbies *,
+.about, .about *, .about-me, .about-me * {
+  color: var(--text) !important;
+}
+.muted, .subtle, .secondary, .project-desc, .project-meta, .caption { color: var(--muted) !important; }
+a { color: var(--brand); }
+a:hover { opacity: .9; }
+
+/* 4) Cards / surfaces */
+.project-card, .card, .faq-item, .certificate-card {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--stroke) !important;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-strong);
+}
+.project-card { border-top: 6px solid var(--brand); }
+
+/* 5) Header / Nav */
+header {
+  background: rgba(11, 11, 12, .7);
+  border-bottom: 1px solid var(--stroke);
+  backdrop-filter: saturate(1.1) blur(8px);
+}
+nav a { color: var(--text) !important; }
+
+/* 6) Buttons & tags */
+.btn, button, .project-link a, .ctrl, .tag, .badge, .pill, mark, .highlight {
+  background: var(--brand) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--stroke) !important;
+  border-radius: 999px;
+}
+.btn:hover, button:hover, .ctrl:hover { filter: brightness(1.05); transform: translateY(-1px); }
+
+/* 7) Forms */
+.contact input, .contact textarea {
+  background: #0f0f12 !important;
+  color: var(--text) !important;
+  border: 1px solid var(--stroke) !important;
+  border-radius: var(--radius);
+}
+.contact label { color: var(--muted) !important; }
+::placeholder { color: #9ea3b0; }
+
+/* 8) Carousel polish */
+.carousel-controls .ctrl { border-radius: 999px; }
+.track::-webkit-scrollbar { height: 10px; }
+.track::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 999px; }
+
+/* 9) Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  body { animation: none !important; }
+}
