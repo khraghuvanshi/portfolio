@@ -20,6 +20,13 @@
     "description": "Developed an interactive movie recommendation web app using Streamlit that suggests similar movies based on a selected title. Leveraged a content-based filtering approach using cosine similarity on movie metadata. The system is intuitive and fast, allowing users to explore recommendations along with poster previews for each suggestion.", 
     "link": "https://movierecommendations-khushi-raghuvanshi-old.streamlit.app/"  
     },
+    {
+        "title": "Power Outages",
+        "year": "2024",
+        "image": "https://opengraph.githubassets.com/1/khraghuvanshi/power_outages",
+        "description": "The project analyses the data of major power outages in the US from January 2000 to July 2006. Designed and developed a data storytelling website that explores patterns in U.S. power outages and predicts outage durations using machine learning. Combined interactive visualizations with narrative insights to highlight key findings and model performance.",
+        "link": "https://khraghuvanshi.github.io/power_outages/"
+    },
   {
         "title": "Metabolic Mystery: Interactive Exploration",
         "year": "2025",
@@ -27,12 +34,21 @@
         "description": "Created an interactive storytelling website that visualizes how macronutrients affect insulin response and diabetes risk. Built with D3.js, the site allows users to input nutritional values (carbs, fat, protein, fiber) and see real-time predictions of their metabolic health category. Animated cluster plots and educational content walk users through the relationship between diet and glucose metabolism",
         "link": "https://khraghuvanshi.github.io/metabolic_mystery/"  
     },
+
     {
         "title": "Comparative Analysis of CNN Architectures for Image Classification",
         "year": "2025",
         "image": "https://opengraph.githubassets.com/1/ebeltyukova/Neural-Network-",
         "description": "Conducted a comprehensive comparison between AlexNet and GoogleNet architectures on the CIFAR-10 dataset to identify the most effective CNN design for multi-class image classification. This project involved replicating and modifying both architectures, performing extensive hyperparameter tuning using Optuna, and analyzing the effects of activation functions, dropout rates, pooling methods, and learning rates on model performance.",
         "link": "https://github.com/ebeltyukova/Neural-Network-.git"
+    },
+    {
+        "title": "Netflix Global Content Analysis Dashboard",
+        "year": "2025",
+        "image": "images/Netflix Data Viz.png",
+        "description": "Cleaned and analyzed 6,000+ Netflix titles using Python and SQL to examine genre, rating, and regional distribution; built an interactive Tableau dashboard with geospatial maps, bubble charts, and time-series visualizations to uncover insights on catalog growth, global content diversity, and audience trends.",
+        "link": "https://public.tableau.com/views/NetflixAnalysis_17528072012960/NetflixDataViz?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+
     },
     {
         "title": "PCA Spotify Music Recommendation",
@@ -47,13 +63,6 @@
         "image": "https://opengraph.githubassets.com/1/khraghuvanshi/classifier_evaluations",
         "description": "This project compares the performance of six supervised learning classifiers—Random Forest, Decision Tree, K-Nearest Neighbors (KNN), Naive Bayes, Support Vector Machine (SVM), and Logistic Regression—on binary classification tasks using three datasets from the UCI Machine Learning Repository.",
         "link": "https://github.com/khraghuvanshi/classifier_evaluations.git"
-    },
-    {
-        "title": "Power Outages",
-        "year": "2024",
-        "image": "https://opengraph.githubassets.com/1/khraghuvanshi/power_outages",
-        "description": "The project analyses the data of major power outages in the US from January 2000 to July 2006. Designed and developed a data storytelling website that explores patterns in U.S. power outages and predicts outage durations using machine learning. Combined interactive visualizations with narrative insights to highlight key findings and model performance.",
-        "link": "https://khraghuvanshi.github.io/power_outages/"
     },
     {
         "title": "Ship Survival: Titanic, Lusitania, and Estonia",
