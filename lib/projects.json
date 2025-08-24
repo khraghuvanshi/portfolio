@@ -34,6 +34,12 @@
         "description": "Created an interactive storytelling website that visualizes how macronutrients affect insulin response and diabetes risk. Built with D3.js, the site allows users to input nutritional values (carbs, fat, protein, fiber) and see real-time predictions of their metabolic health category. Animated cluster plots and educational content walk users through the relationship between diet and glucose metabolism",
         "link": "https://khraghuvanshi.github.io/metabolic_mystery/"  
     },
+    {
+        "title": "Smart Inventory Fulfillment System",
+        "year": "2025",
+        "image": "images/Tesla.png",
+        "description": "Built a Python-powered simulation of Tesla’s Energy operations to analyze warehouse demand, delivery timeliness, and regional order patterns. Designed a Tableau dashboard with interactive KPIs (on-time delivery %, lead time, seasonal demand trends) to uncover performance fluctuations and provide data-driven fulfillment insights."
+    },
 
     {
         "title": "Comparative Analysis of CNN Architectures for Image Classification",
