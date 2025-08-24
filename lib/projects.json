@@ -37,7 +37,7 @@
     {
         "title": "Smart Inventory Fulfillment System",
         "year": "2025",
-        "image": "images/Tesla.png",
+        "image": "images/tesla.png",
         "description": "Built a Python-powered simulation of Tesla’s Energy operations to analyze warehouse demand, delivery timeliness, and regional order patterns. Designed a Tableau dashboard with interactive KPIs (on-time delivery %, lead time, seasonal demand trends) to uncover performance fluctuations and provide data-driven fulfillment insights."
     },
 
