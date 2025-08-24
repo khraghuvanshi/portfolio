@@ -16,14 +16,14 @@
   {
     "title": "Movie Recommendation System",
     "year": "2025",
-    "image": "https://opengraph.githubassets.com/1/khraghuvanshi/movie_recommendations",
+    "image": "images/movie.png",
     "description": "Developed an interactive movie recommendation web app using Streamlit that suggests similar movies based on a selected title. Leveraged a content-based filtering approach using cosine similarity on movie metadata. The system is intuitive and fast, allowing users to explore recommendations along with poster previews for each suggestion.", 
     "link": "https://movierecommendations-khushi-raghuvanshi-old.streamlit.app/"  
     },
     {
         "title": "Power Outages",
         "year": "2024",
-        "image": "https://opengraph.githubassets.com/1/khraghuvanshi/power_outages",
+        "image": "images/power.png",
         "description": "The project analyses the data of major power outages in the US from January 2000 to July 2006. Designed and developed a data storytelling website that explores patterns in U.S. power outages and predicts outage durations using machine learning. Combined interactive visualizations with narrative insights to highlight key findings and model performance.",
         "link": "https://khraghuvanshi.github.io/power_outages/"
     },
